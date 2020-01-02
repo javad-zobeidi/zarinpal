@@ -1,0 +1,21 @@
+name: zarinpal
+description: Zarinpal Package  for dar & flutter, support android and ios
+version: 1.0.3
+author: Javad Zobeidi <J.zobeidi89@gmail.com>
+homepage: https://github.com/irdeveloper89/zarinpal
+
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^3.0.8
+  sprintf: ^4.0.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.8.0
+  test: ^1.6.0

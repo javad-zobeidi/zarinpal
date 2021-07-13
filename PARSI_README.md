@@ -15,10 +15,13 @@
     ..setMerchantID("Zarinpal MerchantID")
     ..setCallbackURL("Verfication Url callbacl");
 ```
-# Zarinpal MerchantID => کد درگاهی هستش مه از زرین پال دریافت میکنید
+# Zarinpal MerchantID => 
+کد درگاهی هستش که از زرین پال دریافت میکنید
+
 # SandBox => 
  برای تست درگاه SandBox را برابر True قرار میدهیم در صورتی که میخواهید نرم افزار را منتشر کنیید حتما آن برا برابر False قرار دهید.
-# Verfication Url callbacl => آدرس باز گشتی از درگاه  
+# Verfication Url callbacl => 
+آدرس باز گشتی از درگاه  
 آدرس بازگشتی از درگاه میتواند به سایت خود نرم افزار باشد و در مروگر اجرا شود یا از Deep Links ها برای بازگشت به نرم افزار استفاده نمایید
 برای استفاده از Deep Links ها میتوانید از پکیج زیر استفاده کنیید. و لینک بازگشتی را در بخش آدرس بازگشتی قرار دهید
 [uni_links](https://pub.dev/packages/uni_links)
@@ -37,7 +40,9 @@ ZarinPal().startPayment(_paymentRequest, (int? status, String? paymentGatewayUri
   });
 
 ```
-# _paymentRequest => الزامی است Object
+# _paymentRequest =>
+الزامی است Object
+
 # status =>
  وضعیتی که از سمت زرین پال برگشت داده میشود اگر برابر 100 باشد یعنی درخواست به درستی ارسال شده و امکان پرداخت وجود دارد
 # paymentGatewayUri =>
@@ -58,11 +63,13 @@ ZarinPal().startPayment(_paymentRequest, (int? status, String? paymentGatewayUri
   });
 ```
 زمانی که کاربر از به نرم افزار بر میگردد جند مورد به صورت QueryS STring در ادرس وجود دارند که باید در کد بالا قرار بگیرند
-# Status => وثعیت پرداخت به صورت OK dh NOK
+# Status => 
+وثعیت پرداخت به صورت OK dh NOK
 # Authority Call back =>
 شناسه پرداخت که در متقیر Authority قرار داد و باید بجای متن بالا قرار بگیر
 
-# refID => در کد بالا شناس پرداخت می باشد یک عدد می باشد که شناس پرداخت جهت پیگیری پیداخت می باشد.
+# refID => 
+در کد بالا شناس پرداخت می باشد یک عدد می باشد که شناس پرداخت جهت پیگیری پیداخت می باشد.
 
 
 نمونه کد

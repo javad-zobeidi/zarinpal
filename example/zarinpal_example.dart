@@ -11,7 +11,7 @@ main() {
   _paymentRequest.setAmount(1000);//integar Amount
   _paymentRequest.setCallbackURL("Verfication Url callbacl"); //The callback can be an android scheme or a website URL, you and can pass any data with The callback for both scheme and  URL
   _paymentRequest.setDescription("Payment Description");
-  
+
 
   String? _paymentUrl;
 

@@ -1,3 +1,6 @@
+## 1.0.4
+- Migrating to null safety
+
 ## 1.0.3
 - fixed verification code
 

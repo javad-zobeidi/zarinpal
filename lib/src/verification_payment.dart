@@ -1,17 +1,17 @@
 class VerificationPayment {
-  num _amount;
-  String _authority;
-  String _merchantID;
+  num? _amount;
+  String? _authority;
+  String? _merchantID;
 
-  num getAmount() {
+  num? getAmount() {
     return _amount;
   }
 
-  void setAmount(num amount) {
+  void setAmount(num? amount) {
     this._amount = amount;
   }
 
-  String getAuthority() {
+  String? getAuthority() {
     return _authority;
   }
 
@@ -19,11 +19,11 @@ class VerificationPayment {
     this._authority = authority;
   }
 
-  String getMerchantID() {
+  String? getMerchantID() {
     return _merchantID;
   }
 
-  void setMerchantID(String merchantID) {
+  void setMerchantID(String? merchantID) {
     this._merchantID = merchantID;
   }
 

@@ -32,8 +32,7 @@ class ZarinPal {
       final Map<String, dynamic> result = response.data;
       if (result["Status"] == 100) {
         paymentRequest.setAuthority(result["Authority"]);
-        listener(int.parse(result["Status"].toString()),
-            paymentRequest.getStartPaymentGatewayURL(result["Authority"]));
+        listener(int.parse(result["Status"].toString()),paymentRequest.getStartPaymentGatewayURL(result["Authority"]));
       } else {
         listener(result["status"], null);
       }
@@ -60,9 +59,6 @@ class ZarinPal {
       ..setAuthority(authority)
       ..setMerchantID(paymentRequest.getMerchantID())
       ..setAmount(paymentRequest.getAmount());
-
-    print(verificationPayment.toMap());
-
     try {
       Response response = await _dio.post(
           paymentRequest.getVerificationPaymentURL(),

@@ -8,13 +8,13 @@ class PaymentRequest {
   static final String verificationPaymentUrl =
       "https://www.%szarinpal.com/pg/rest/WebGate/PaymentVerification.json";
 
-  String merchantID;
-  num amount;
+  String? merchantID;
+  num? amount;
   String mobile = "";
   String email = "";
-  String description;
-  String callBackURL;
-  String authority;
+  String? description;
+  String? callBackURL;
+  String? authority;
   bool isSandBox = false;
   bool isZarinGateEnable = false;
 
@@ -39,19 +39,19 @@ class PaymentRequest {
 
   setEmail(String email) => this.email = email;
 
-  String getCallBackURL() {
+  String? getCallBackURL() {
     return callBackURL;
   }
 
-  void setAuthority(String authority) {
+  void setAuthority(String? authority) {
     this.authority = authority;
   }
 
-  num getAmount() {
+  num? getAmount() {
     return amount;
   }
 
-  String getDescription() {
+  String? getDescription() {
     return description;
   }
 
@@ -59,7 +59,7 @@ class PaymentRequest {
     return mobile;
   }
 
-  String getMerchantID() {
+  String? getMerchantID() {
     return merchantID;
   }
 
@@ -67,11 +67,11 @@ class PaymentRequest {
     return email;
   }
 
-  String getAuthority() {
+  String? getAuthority() {
     return authority;
   }
 
-  String getStartPaymentGatewayURL(String authority) {
+  String getStartPaymentGatewayURL(String? authority) {
     return sprintf(paymentGatewayUrl, [
       isSandBox ? "sandbox." : "",
       authority,

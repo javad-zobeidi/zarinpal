@@ -4,24 +4,22 @@ main() {
 
 // Initialize payment request
 // For scheme you can use uni_links flutter Package
-  PaymentRequest _paymentRequest = PaymentRequest()
-    ..setIsSandBox(true)
-    ..setMerchantID("Zarinpal MerchantID")
-    ..setAmount(1000)//integar Amount
-    ..setCallbackURL("Verfication Url callbacl") //The callback can be an android scheme or a website URL, you and can pass any data with The callback for both scheme and  URL
-    ..setDescription("Payment Description");
+  PaymentRequest _paymentRequest = PaymentRequest();
 
+  _paymentRequest.setIsSandBox(true);
+  _paymentRequest.setMerchantID("Zarinpal MerchantID");
+  _paymentRequest.setAmount(1000);//integar Amount
+  _paymentRequest.setCallbackURL("Verfication Url callbacl"); //The callback can be an android scheme or a website URL, you and can pass any data with The callback for both scheme and  URL
+  _paymentRequest.setDescription("Payment Description");
+  
 
-
-
-  String _paymentUrl = null;
+  String? _paymentUrl;
 
 
 // Call Start payment
-  ZarinPal().startPayment(_paymentRequest, (int status, String paymentGatewayUri){
+  ZarinPal().startPayment(_paymentRequest, (int? status, String? paymentGatewayUri){
     if(status == 100)
       _paymentUrl = paymentGatewayUri; // launch URL in browser
-
   });
 
 
